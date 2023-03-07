@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 40px solid rgb(35, 160, 35);
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #e49ace);
+}
+.temporizador {
+    font-size: 60px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-55%, -50%);
+}
+
+/* Definido o objeto cogumelo e inserindo aniamção e especificando o tamanho */
+.obj{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: -80px; 
+    animation: obj-animation 1.5s infinite linear;
+}
+
+.pok{
+    width: auto;
+    position: absolute;
+    bottom: -47px;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+/* animação*/
+@keyframes obj-animation {
+    from {
+        right: 0%;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0%{
+        bottom: -47px;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 120px;
+    }
+
+    60% {
+        bottom: 120px;
+    }
+    100%{
+        bottom: -47px;
+    }
+}
+
+footer{
+    text-align: center;
+    font-style: italic;
+}
